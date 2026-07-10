@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulsa - TOKON</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Isi Pulsa</h1>
+<p>Pilih nominal pulsa</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h3>Nomor HP</h3>
+<input type="text" id="nomor" placeholder="08xxxxxxxxxx" style="width:100%;padding:10px;margin-top:10px;">
+</div>
+
+<div class="card">
+<h3>Pilih Nominal</h3>
+
+<select id="nominal" style="width:100%;padding:10px;margin-top:10px;">
+<option value="5000">Rp5.000</option>
+<option value="10000">Rp10.000</option>
+<option value="20000">Rp20.000</option>
+<option value="50000">Rp50.000</option>
+<option value="100000">Rp100.000</option>
+</select>
+
+<br><br>
+
+<button onclick="beliPulsa()" style="width:100%;padding:12px;background:#1565C0;color:white;border:none;border-radius:8px;">
+Beli Pulsa
+</button>
+
+</div>
+
+</div>
+
+<script>
+function beliPulsa(){
+    let nomor=document.getElementById("nomor").value;
+    let nominal=document.getElementById("nominal").value;
+
+    if(nomor==""){
+        alert("Masukkan nomor HP.");
+        return;
+    }
+
+    alert(
+        "Pesanan berhasil dibuat!\n\nNomor: "
+        + nomor +
+        "\nNominal: Rp"
+        + nominal
+    );
+}
+</script>
+
+</body>
+</html>
