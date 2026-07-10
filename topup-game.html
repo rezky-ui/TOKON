@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Up Game - TOKON</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Top Up Game</h1>
+<p>Pilih game favoritmu</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h3>ID Game</h3>
+<input type="text" id="idgame" placeholder="Masukkan ID Game" style="width:100%;padding:10px;margin:10px 0;">
+
+<h3>Pilih Game</h3>
+<select id="game" style="width:100%;padding:10px;">
+<option>Mobile Legends</option>
+<option>Free Fire</option>
+<option>PUBG Mobile</option>
+<option>Valorant</option>
+<option>Honor of Kings</option>
+</select>
+
+<h3 style="margin-top:15px;">Nominal</h3>
+<select id="nominal" style="width:100%;padding:10px;">
+<option>Rp10.000</option>
+<option>Rp20.000</option>
+<option>Rp50.000</option>
+<option>Rp100.000</option>
+<option>Rp200.000</option>
+</select>
+
+<br><br>
+
+<button onclick="topup()" style="width:100%;padding:12px;background:#1565C0;color:white;border:none;border-radius:8px;">
+Top Up Sekarang
+</button>
+
+</div>
+
+</div>
+
+<script>
+function topup(){
+let id=document.getElementById("idgame").value;
+let game=document.getElementById("game").value;
+let nominal=document.getElementById("nominal").value;
+
+if(id==""){
+alert("Masukkan ID Game");
+return;
+}
+
+alert(
+"Pesanan berhasil dibuat!\n\nGame: "+game+
+"\nID: "+id+
+"\nNominal: "+nominal
+);
+}
+</script>
+
+</body>
+</html>
