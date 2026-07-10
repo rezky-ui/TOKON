@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Token PLN - TOKON</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Token PLN</h1>
+<p>Pembelian Token Listrik</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h3>Nomor Meter / ID Pelanggan</h3>
+
+<input
+type="text"
+id="meter"
+placeholder="Masukkan Nomor Meter"
+style="width:100%;padding:10px;margin:10px 0;">
+
+<h3>Pilih Nominal</h3>
+
+<select id="token" style="width:100%;padding:10px;">
+<option>Rp20.000</option>
+<option>Rp50.000</option>
+<option>Rp100.000</option>
+<option>Rp200.000</option>
+<option>Rp500.000</option>
+<option>Rp1.000.000</option>
+</select>
+
+<br><br>
+
+<button
+onclick="beliToken()"
+style="width:100%;padding:12px;background:#1565C0;color:white;border:none;border-radius:8px;">
+Beli Token
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function beliToken(){
+
+let meter=document.getElementById("meter").value;
+
+let nominal=document.getElementById("token").value;
+
+if(meter==""){
+alert("Masukkan nomor meter.");
+return;
+}
+
+alert(
+"Pesanan berhasil dibuat!\n\nNomor Meter: "
++meter+
+"\nNominal: "
++nominal
+);
+
+}
+
+</script>
+
+</body>
+</html>
