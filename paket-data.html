@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paket Data - TOKON</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Paket Data</h1>
+<p>Beli paket internet semua operator</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h3>Nomor HP</h3>
+<input type="text" id="nomor" placeholder="08xxxxxxxxxx" style="width:100%;padding:10px;margin-top:10px;">
+</div>
+
+<div class="card">
+<h3>Pilih Paket</h3>
+
+<select id="paket" style="width:100%;padding:10px;margin-top:10px;">
+<option>1 GB - Rp10.000</option>
+<option>5 GB - Rp25.000</option>
+<option>10 GB - Rp50.000</option>
+<option>20 GB - Rp100.000</option>
+<option>50 GB - Rp200.000</option>
+</select>
+
+<br><br>
+
+<button onclick="beliPaket()" style="width:100%;padding:12px;background:#1565C0;color:white;border:none;border-radius:8px;">
+Beli Paket
+</button>
+
+</div>
+
+</div>
+
+<script>
+function beliPaket(){
+let nomor=document.getElementById("nomor").value;
+let paket=document.getElementById("paket").value;
+
+if(nomor==""){
+alert("Masukkan nomor HP");
+return;
+}
+
+alert("Pesanan berhasil dibuat!\n\nNomor: "+nomor+"\nPaket: "+paket);
+}
+</script>
+
+</body>
+</html>
