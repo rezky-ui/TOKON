@@ -47,3 +47,7 @@ footer{
 text-decoration:none;
 color:black;
 }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
