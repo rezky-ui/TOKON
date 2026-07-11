@@ -1,39 +1,103 @@
+/* ===== RESET ===== */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
     background:#f5f7fb;
+    color:#333;
 }
 
+/* ===== HEADER ===== */
 .header{
     background:#0d6efd;
-    color:white;
+    color:#fff;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:20px;
 }
 
-.login{
-    color:white;
-    text-decoration:none;
-    background:#ffffff33;
-    padding:10px 16px;
-    border-radius:8px;
+.logo h2{
+    font-size:28px;
 }
 
+.logo p{
+    font-size:14px;
+    opacity:.9;
+}
+
+.login{
+    color:#fff;
+    text-decoration:none;
+    background:rgba(255,255,255,.2);
+    padding:10px 18px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.login:hover{
+    background:rgba(255,255,255,.35);
+}
+
+/* ===== SALDO ===== */
+.saldo-box{
+    background:#fff;
+    margin:20px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.saldo-box h3{
+    font-size:16px;
+}
+
+.saldo-box h2{
+    color:#0d6efd;
+    margin:10px 0;
+}
+
+.saldo-box button{
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* ===== SEARCH ===== */
+.search-box{
+    margin:20px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    outline:none;
+    font-size:16px;
+}
+
+/* ===== BANNER ===== */
 .banner{
     margin:20px;
+    padding:30px;
+    border-radius:18px;
     background:linear-gradient(135deg,#0d6efd,#4ea3ff);
-    color:white;
-    padding:25px;
-    border-radius:15px;
+    color:#fff;
 }
 
+.banner h2{
+    margin-bottom:10px;
+}
+
+/* ===== MENU ===== */
 .menu{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -42,13 +106,13 @@ body{
 }
 
 .card{
-    background:white;
+    background:#fff;
+    border-radius:15px;
     text-decoration:none;
-    color:#222;
+    color:#333;
     text-align:center;
     padding:20px;
-    border-radius:15px;
-    box-shadow:0 3px 10px rgba(0,0,0,.1);
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
     transition:.3s;
 }
 
@@ -62,10 +126,13 @@ body{
     font-weight:bold;
 }
 
+/* ===== JUDUL ===== */
 .judul{
     margin:20px;
+    font-size:24px;
 }
 
+/* ===== PRODUK ===== */
 .produk{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -74,42 +141,41 @@ body{
 }
 
 .item{
-    background:white;
+    background:#fff;
     padding:20px;
     border-radius:15px;
     text-align:center;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
-}
-.saldo-box{
-    background:white;
-    margin:20px;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 2px 10px rgba(0,0,0,.1);
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    transition:.3s;
 }
 
-.saldo-box h2{
-    color:#0d6efd;
-    margin:10px 0;
+.item:hover{
+    transform:translateY(-5px);
 }
 
-.saldo-box button{
+/* ===== FOOTER ===== */
+footer{
     background:#0d6efd;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:10px;
-    cursor:pointer;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
 }
 
-.search-box{
-    margin:20px;
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+
+.menu{
+grid-template-columns:repeat(2,1fr);
 }
 
-.search-box input{
-    width:100%;
-    padding:14px;
-    border:1px solid #ddd;
-    border-radius:12px;
-    font-size:16px;
+.produk{
+grid-template-columns:1fr;
+}
+
+.header{
+flex-direction:column;
+gap:15px;
+}
+
 }
